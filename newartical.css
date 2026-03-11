@@ -1,0 +1,382 @@
+/* 基础样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #66b3ff 0%, #99ccff 100%);
+    min-height: 100vh;
+}
+
+/* 导航栏样式 */
+nav {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #3399ff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.logo a:hover {
+    color: #66b3ff;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.nav-links li a:hover {
+    background-color: rgba(51, 153, 255, 0.1);
+    color: #3399ff;
+}
+
+.nav-links li a.active {
+    background-color: #3399ff;
+    color: white;
+}
+
+/* 主要内容区域 */
+main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    min-height: calc(100vh - 180px);
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.page-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #333;
+    text-align: center;
+    border-bottom: 2px solid #3399ff;
+    padding-bottom: 15px;
+}
+
+/* 表单样式 */
+.form-group {
+    margin-bottom: 25px;
+}
+
+.title-input {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2rem;
+    border: 2px solid rgba(51, 153, 255, 0.3);
+    border-radius: 10px;
+    outline: none;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.title-input:focus {
+    border-color: #3399ff;
+    box-shadow: 0 0 0 3px rgba(51, 153, 255, 0.1);
+}
+
+.title-input::placeholder {
+    color: #999;
+}
+
+/* 编辑工具栏 */
+.editor-toolbar {
+    background: rgba(248, 249, 250, 0.8);
+    border: 1px solid rgba(51, 153, 255, 0.2);
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+}
+
+.toolbar-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.toolbar-group label {
+    font-weight: 500;
+    color: #555;
+    white-space: nowrap;
+}
+
+#fontColor {
+    width: 40px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#fontSize {
+    padding: 5px 10px;
+    border: 1px solid rgba(51, 153, 255, 0.3);
+    border-radius: 5px;
+    outline: none;
+    background: white;
+    cursor: pointer;
+}
+
+.toolbar-btn {
+    padding: 8px 12px;
+    background: white;
+    border: 1px solid rgba(51, 153, 255, 0.3);
+    border-radius: 5px;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.toolbar-btn:hover {
+    background: #3399ff;
+    color: white;
+    border-color: #3399ff;
+}
+
+.alignment-buttons {
+    display: flex;
+    gap: 5px;
+}
+
+/* 编辑区 */
+.editor-content {
+    min-height: 400px;
+    padding: 20px;
+    border: 2px solid rgba(51, 153, 255, 0.3);
+    border-radius: 10px;
+    background: white;
+    outline: none;
+    margin-bottom: 30px;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.editor-content:focus {
+    border-color: #3399ff;
+    box-shadow: 0 0 0 3px rgba(51, 153, 255, 0.1);
+}
+
+.editor-content p {
+    margin-bottom: 15px;
+}
+
+.editor-content img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+/* 操作按钮 */
+.action-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.save-btn, .cancel-btn {
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.save-btn {
+    background: linear-gradient(135deg, #3399ff, #66b3ff);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.save-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(51, 153, 255, 0.4);
+}
+
+.cancel-btn {
+    background: white;
+    color: #333;
+    border: 1px solid rgba(51, 153, 255, 0.3);
+}
+
+.cancel-btn:hover {
+    background: rgba(51, 153, 255, 0.1);
+    color: #3399ff;
+}
+
+/* 页脚 */
+footer {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    margin-top: 60px;
+    padding: 30px 0;
+    text-align: center;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px 20px 0 0;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-content p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+    }
+    
+    .nav-links {
+        gap: 10px;
+    }
+    
+    .nav-links li a {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+    }
+    
+    main {
+        margin: 20px auto;
+    }
+    
+    .container {
+        padding: 30px 20px;
+    }
+    
+    .page-title {
+        font-size: 1.5rem;
+    }
+    
+    .editor-toolbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .toolbar-group {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .save-btn, .cancel-btn {
+        width: 100%;
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+    }
+    
+    .title-input {
+        padding: 12px;
+        font-size: 1rem;
+    }
+    
+    .editor-content {
+        min-height: 300px;
+        padding: 15px;
+    }
+}
+
+/* 动画效果 */
+.container {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.editor-toolbar {
+    animation: fadeInUp 0.8s ease 0.2s forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.editor-content {
+    animation: fadeInUp 0.8s ease 0.4s forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.action-buttons {
+    animation: fadeInUp 0.8s ease 0.6s forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
