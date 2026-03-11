@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人主页</title>
+    <link rel="stylesheet" href="/css/person.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/js/person.js"></script>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">我的博客</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="person.html" class="active">个人主页</a></li>
+                <li><a href="artical.html">文章</a></li>
+                <li><a href="#">联系我</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- 主要内容区域 -->
+    <main>
+        <!-- 个人信息卡片 -->
+        <section class="profile-card">
+            <div class="profile-header">
+                <div class="avatar-container">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional%20avatar%20portrait%20of%20a%20young%20developer&image_size=square" alt="个人头像" class="avatar" id="avatar">
+                    <input type="file" id="avatar-upload" class="avatar-upload">
+                    <label for="avatar-upload" class="avatar-upload-label">
+                        <span class="upload-icon">📷</span>
+                        <span class="upload-text">更换头像</span>
+                    </label>
+                </div>
+                <div class="editable-field">
+                    <h1 class="profile-name" contenteditable="true" id="profileName">开发者</h1>
+                    <span class="edit-hint">点击编辑名字</span>
+                </div>
+                <div class="editable-field">
+                    <p class="profile-id">ID: <span contenteditable="true" id="profileId">dev_2026</span></p>
+                    <span class="edit-hint">点击编辑ID</span>
+                </div>
+                <div class="editable-field">
+                    <p class="profile-bio" contenteditable="true" id="profileBio">热爱技术的前端开发者，喜欢分享学习心得和生活感悟。</p>
+                    <span class="edit-hint">点击编辑个人简介</span>
+                </div>
+                <div class="profile-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" id="articleCount">12</span>
+                        <span class="stat-label">文章</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 文章统计图表 -->
+        <section class="chart-section">
+            <h2 class="section-title">最近一个月文章上传统计</h2>
+            <div class="chart-container">
+                <canvas id="articleChart"></canvas>
+            </div>
+        </section>
+    </main>
+    
+    <!-- 页脚 -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 我的个人博客 - 保留所有权利</p>
+            <p>本网站全用Trae CN完成</p>
+        </div>
+    </footer>
+</body>
+</html>

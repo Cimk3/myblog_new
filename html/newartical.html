@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新建文章</title>
+    <link rel="stylesheet" href="/css/newartical.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">我的博客</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="person.html" target="_blank">个人主页</a></li>
+                <li><a href="artical.html">文章</a></li>
+                <li><a href="#">联系我</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- 主要内容区域 -->
+    <main>
+        <div class="container">
+            <h1 class="page-title">新建文章</h1>
+            
+            <!-- 文章标题输入 -->
+            <div class="form-group">
+                <input type="text" id="articleTitle" placeholder="请输入文章标题" class="title-input">
+            </div>
+            
+            <!-- 编辑工具栏 -->
+            <div class="editor-toolbar">
+                <div class="toolbar-group">
+                    <label>字体颜色:</label>
+                    <input type="color" id="fontColor" value="#333333">
+                </div>
+
+                <div class="toolbar-group">
+                    <button id="insertImage" class="toolbar-btn">插入图片</button>
+                    <button id="insertLink" class="toolbar-btn">插入超链接</button>
+                </div>
+                <div class="toolbar-group">
+                    <label>对齐方式:</label>
+                    <div class="alignment-buttons">
+                        <button id="alignLeft" class="toolbar-btn">左对齐</button>
+                        <button id="alignCenter" class="toolbar-btn">居中</button>
+                        <button id="alignRight" class="toolbar-btn">右对齐</button>
+                    </div>
+                </div>
+                <div class="toolbar-group">
+                    <button id="previewArticle" class="toolbar-btn">预览</button>
+                </div>
+            </div>
+            
+            <!-- 文章内容编辑区 -->
+            <div id="editor" contenteditable="true" class="editor-content">
+                <p>请输入文章内容...</p>
+            </div>
+            
+            <!-- 操作按钮 -->
+            <div class="action-buttons">
+                <button id="saveArticle" class="save-btn">保存文章</button>
+                <a href="artical.html" class="cancel-btn">取消</a>
+            </div>
+        </div>
+    </main>
+    
+    <!-- 页脚 -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 我的个人博客 - 保留所有权利</p>
+            <p>本网站全用Trae CN完成</p>
+        </div>
+    </footer>
+    
+    <script src="/js/newartical.js"></script>
+</body>
+</html>
